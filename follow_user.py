@@ -23,7 +23,8 @@ while True:
     rgb_frame=frame[:,:,::-1]
 
     #find the faces
-    face_locations=face_recognition.face_locations(rgb_frame,model='cnn')
+    #face_locations=face_recognition.face_locations(rgb_frame,model='cnn')
+    face_locations=face_recognition.face_locations(rgb_frame)
     face_encodings=face_recognition.face_encodings(rgb_frame,face_locations)
 
     face_names=[]
@@ -55,9 +56,9 @@ while True:
         #Display the resultant image
         cv2.imshow('Video',frame)
 
-        #Hit 'q' on the keyboard to quit!
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+    #Hit 'q' on the keyboard to quit!
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
 
 video.release()
