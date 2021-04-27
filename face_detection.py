@@ -27,8 +27,8 @@ while True:
         #Draw a box around the face
         cv2.rectangle(frame,(left,top),(right,bottom),(0,255,0),2)
 
-    #Display the resultant image
-    cv2.imshow('Video',frame)
+        #Display the resultant image
+        cv2.imshow('Video',frame)
 
     #Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
